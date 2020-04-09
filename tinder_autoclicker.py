@@ -84,10 +84,15 @@ class TinderBot():
         passport_button = self.driver.find_element_by_xpath('//*[@id="modal-manager"]/div/div/div[2]/button')
         passport_button.click()
 
+    def disable_bot(self):
+        self.driver.quit()
 
+# Steps of functions
 bot = TinderBot()
 bot.login()
 bot.auto_swipe()
+bot.disable_bot()
+
 
 
 
